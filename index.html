@@ -32,68 +32,6 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1879469387670618"
      crossorigin="anonymous"></script>
 
-<script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
-<script>
-  window.OneSignalDeferred = window.OneSignalDeferred || [];
-  OneSignalDeferred.push(async function(OneSignal) {
-    await OneSignal.init({
-      appId: "91a0bd79-5f4f-47b1-96fc-5bcd05a266ba", // Your OneSignal App ID
-    });
-
-    // Show the subscription prompt to users
-    OneSignal.push(function() {
-      OneSignal.showSlidedownPrompt();
-    });
-
-    // Call the function to track playtime
-    checkIfPlayedToday();
-  });
-
-  // Set the current time when the user finishes a game
-  function setLastPlayedTime() {
-    const currentTime = new Date();
-    localStorage.setItem('lastPlayedTime', currentTime.toISOString());
-  }
-
-  // Check if the user has played today, and if it's past 12 PM, send a reminder
-  function checkIfPlayedToday() {
-    const lastPlayedTime = localStorage.getItem('lastPlayedTime');
-    const currentTime = new Date();
-    
-    if (lastPlayedTime) {
-      const lastPlayedDate = new Date(lastPlayedTime);
-      const currentHour = currentTime.getHours();
-      
-      // Check if it's past 12 PM (12:00)
-      if (currentHour >= 12) {
-        // If the user hasn’t played today, send a push notification reminder
-        if (lastPlayedDate.toDateString() !== currentTime.toDateString()) {
-          // Send notification if they haven't played today
-          sendPushNotification("You didn't play the game today! 😕", "Are you okay? Come back and play your favorite game!");
-        }
-      }
-    } else {
-      // If there's no recorded playtime (i.e., user hasn't played yet)
-      sendPushNotification("You didn't play the game today! 😕", "Are you okay? Come back and play your favorite game!");
-    }
-  }
-
-  // Function to send the push notification
-  function sendPushNotification(title, message) {
-    OneSignal.push(function() {
-      OneSignal.sendSelfNotification(
-        title,          // Notification title
-        message,        // Notification message
-        window.location.href, // Link to the game or site
-        null,           // Optional image URL
-        null,           // Optional data payload
-        null            // Additional parameters (e.g., timing, actions)
-      );
-    });
-  }
-
-</script>
-
 
 </head>
 	<body id="page-top" style="background: url('images/background1.png'); background-size: cover;">
