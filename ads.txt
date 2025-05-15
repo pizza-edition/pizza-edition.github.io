@@ -724,3 +724,11 @@ disqus.com, 4715692, DIRECT
 appnexus.com, 9393, DIRECT, f5ab79cb980f11d1
 sharethrough.com, cc26d15a, DIRECT, d53b998a7bd4ecd2
 
+#pub2
+google.com, pub-9047737572880453, DIRECT, f08c47fec0942fa0
+google.com, pub-6839973589095521, RESELLER, f08c47fec0942fa0
+google.com, pub-6839973589095521, DIRECT, f08c47fec0942fa0
+google.com, pub-8153055892847290, RESELLER, f08c47fec0942fa0
+google.com, pub-8153055892847290, DIRECT, f08c47fec0942fa0
+google.com, pub-6839535264630930, DIRECT, f08c47fec0942fa0
+pubpower.io, 2996, DIRECT
