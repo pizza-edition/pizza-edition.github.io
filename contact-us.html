@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us | Pizza Edition</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #fff8f0;
+      color: #333;
+      padding: 40px;
+      max-width: 800px;
+      margin: auto;
+    }
+    h1 {
+      color: #d13f3f;
+    }
+    form {
+      margin-top: 30px;
+      display: flex;
+      flex-direction: column;
+    }
+    label {
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    input, textarea {
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      margin-top: 5px;
+    }
+    button {
+      margin-top: 20px;
+      background-color: #d13f3f;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 6px;
+    }
+    button:hover {
+      background-color: #b73434;
+    }
+    .note {
+      margin-top: 30px;
+      font-size: 14px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <h1>Contact Us</h1>
+  <p>Have questions, feedback, or collaboration ideas? Reach out to us using the form below.</p>
+
+  <form action="https://formspree.io/f/yourformid" method="POST">
+    <!-- Replace yourformid with actual Formspree form ID or change action as needed -->
+    <label for="name">Your Name</label>
+    <input type="text" name="name" id="name" required />
+
+    <label for="email">Your Email</label>
+    <input type="email" name="email" id="email" required />
+
+    <label for="message">Your Message</label>
+    <textarea name="message" id="message" rows="6" required></textarea>
+
+    <button type="submit">Send Message</button>
+  </form>
+
+  <p class="note">We usually reply within 24–48 hours. For quick questions, you can also reach us via GitHub: 
+    <a href="https://github.com/pizza-edition/pizza-edition.github.io" target="_blank">pizza-edition.github.io</a>
+  </p>
+</body>
+</html>
