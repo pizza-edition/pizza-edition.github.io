@@ -48,3 +48,20 @@ function search_animal() {
   stickyInit.innerHTML = "(powerTag.Init = window.powerTag.Init || []).push(function () { powerAPITag.initStickyBanner('pw_47095'); });";
   head.appendChild(stickyInit);
 })();
+
+// Inject responsive banner ad into all pages
+document.addEventListener("DOMContentLoaded", function () {
+  var container = document.querySelector(".banner-ad-wrapper .banner-ad-content");
+  if (container) {
+    var pubtag = document.createElement("pubtag");
+    pubtag.className = "adsbypubpower";
+    pubtag.setAttribute("data-ad-slot", "pw_47093");
+
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.innerHTML = "(powerTag.Init = window.powerTag.Init || []).push(function () { powerAPITag.display('pw_47093'); });";
+
+    container.appendChild(pubtag);
+    container.appendChild(script);
+  }
+});
