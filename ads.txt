@@ -732,3 +732,6 @@ google.com, pub-8153055892847290, RESELLER, f08c47fec0942fa0
 google.com, pub-8153055892847290, DIRECT, f08c47fec0942fa0
 google.com, pub-6839535264630930, DIRECT, f08c47fec0942fa0
 pubpower.io, 2996, DIRECT
+
+
+google.com, pub-1855978943103468, DIRECT, f08c47fec0942fa0
