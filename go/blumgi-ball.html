@@ -170,6 +170,12 @@
                     <i class="bi bi-x-circle-fill"></i>
                   </div>
                   <iframe class="game-iframe" id="game-area" src="https://sudoku-online.github.io/a2/blumgi-ball/" width="480" height="800" scrolling="none" frameborder="0" allowfullscreen=""></iframe>
+    overlayPlay.setAttribute("title", "Play Video");
+    overlayPlay.style.cssText = "z-index: 9997; position: absolute; width: 100%; height: 100%; top: 0px; left: 0px;cursor:pointer;";
+    overlayPlay.title = "Play Game";
+    overlayPlay.setAttribute("onclick", "(powerTag.Init = window.powerTag.Init || []).push(function() {powerAPITag.initPowerInstream('pw_47096'); });this.parentNode.removeChild(this);");
+    gamePlayer.appendChild(overlayPlay);
+}
                 </div>
               </div>
 
